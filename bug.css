@@ -1,0 +1,21 @@
+The CSS specificity rules can be confusing.  For example, consider the following:
+
+```css
+div {
+  color: blue;
+}
+
+.highlight {
+  color: red;
+}
+
+#specific {
+  color: green;
+}
+
+#specific.highlight {
+  color: purple;
+}
+```
+
+The element with the id `specific` and class `highlight` will be purple.  However, it's easy to make subtle errors where you unintentionally override styles with higher specificity selectors, leading to unexpected visual results.
